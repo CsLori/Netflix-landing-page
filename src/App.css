@@ -2,21 +2,131 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  color: #999;
+  font-family: Arial, sans-serif;
+  background: #000;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #fff;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+img {
+  width: 30%;
+  height: 10vh;
+}
+
+.showcase {
+  width: 100%;
+  height: 93vh;
+  position: relative;
+  background: url('/img/background.jpg') no-repeat center center/cover;
+}
+
+.showcase::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: inset 80px 60px 200px #000000, inset -80px -60px 200px #000000;
+}
+
+.showcase-top {
+  position: relative;
+  height: 90px;
+  z-index: 2;
+}
+
+.showcase-top img {
+  position: absolute;
+  width: 170px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.showcase-top a {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.showcase-content {
+  z-index: 2;
+
+  position: relative;
+  margin: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  text-align: center;
+  margin-top: 9rem;
 }
 
-.App-link {
-  color: #09d3ac;
+.showcase-content h1 {
+  font-weight: 700;
+  font-size: 5.2rem;
+  line-height: 1.1;
+  margin: 0 0 2rem;
+}
+.showcase-content p {
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.9rem;
+  line-height: 1.25;
+  margin: 0 0 2rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: red;
+  color: #fff;
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  outline: none;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+  border-radius: 2px;
+}
+.btn:hover {
+  opacity: 0.45;
+}
+
+.btn-rounded {
+  border-radius: 5px;
+}
+
+.btn-xl {
+  font-size: 2rem;
+  padding: 1.3rem 1.8rem;
+  text-transform: uppercase;
 }
