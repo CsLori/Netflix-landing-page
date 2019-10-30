@@ -1,23 +1,16 @@
 import React from 'react';
 import './App.css';
+import Header from './components/Header';
+import Tabs from './components/Tabs';
+import TabContentOne from './components/TabContentOne';
 
 function App() {
   return (
-    <header className="showcase">
-      <div className="showcase-top">
-        <img src="/img/bg.jpg" alt="Netflix" />
-        <a href="#" className="btn btn-rounded">
-          Sign in
-        </a>
-      </div>
-      <div className="showcase-content">
-        <h1>See what's next</h1>
-        <p>Watch anywhere. Cancel anytime</p>
-        <a href="#" className="btn btn-xl">
-          Watch Free For 30 Days
-        </a>
-      </div>
-    </header>
+    <>
+      <Header />
+      <Tabs />
+      <TabContentOne />
+    </>
   );
 }
 
